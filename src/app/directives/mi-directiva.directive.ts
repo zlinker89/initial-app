@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appMiDirectiva]'
@@ -10,10 +10,19 @@ export class MiDirectivaDirective implements OnInit {
     public renderer: Renderer2
   ) { }
 
-  @Input() appMiDirectiva = false;
+  @HostListener('mouseenter') onMouseEnter(): void {
+    this.hover(true);
+  }
+  @HostListener('mouseleave') onMouseLeave(): void {
+    this.hover(false);
+  }
   ngOnInit(): void {
-    if (this.appMiDirectiva) {
+  }
+  hover(bandera: boolean): void{
+    if (bandera) {
       this.renderer.setStyle(this.el.nativeElement, 'color', 'red');
+    } else {
+      this.renderer.setStyle(this.el.nativeElement, 'color', 'black');
     }
   }
 }

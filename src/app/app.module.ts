@@ -14,6 +14,8 @@ import { PadreComponent } from './components/padre/padre.component';
 import { HijoComponent } from './components/hijo/hijo.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { MiDirectivaDirective } from './directives/mi-directiva.directive';
+import { SubjectsComponent } from './components/subjects/subjects.component';
+import { BehaivorSubjectsComponent } from './components/behaivor-subjects/behaivor-subjects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MiDirectivaDirective } from './directives/mi-directiva.directive';
     PadreComponent,
     HijoComponent,
     FormularioComponent,
-    MiDirectivaDirective
+    MiDirectivaDirective,
+    SubjectsComponent,
+    BehaivorSubjectsComponent
   ],
   imports: [
     BrowserModule,

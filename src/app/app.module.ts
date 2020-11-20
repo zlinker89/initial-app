@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PadreComponent } from './components/padre/padre.component';
 import { HijoComponent } from './components/hijo/hijo.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { MiDirectivaDirective } from './directives/mi-directiva.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     ServicioComponent,
     PadreComponent,
     HijoComponent,
-    FormularioComponent
+    FormularioComponent,
+    MiDirectivaDirective
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<h1>Formulario basico</h1>
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <label>Nombre</label>
+  <input type="text" formControlName="Nombre" [ngClass]="{ 'is-invalid': submitted && f.Nombre.errors }">
+  <br>
+  <label>Usuario</label>
+  <input type="text" formControlName="Usuario" [ngClass]="{ 'is-invalid': submitted && f.Usuario.errors }">
+  <br>
+  <label>Email</label>
+  <input type="email" formControlName="Email" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }">
+  <br>
+  <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+      <div *ngIf="f.Email.errors.required">Email is required</div>
+      <div *ngIf="f.Email.errors.email">Email must be a valid email address</div>
+  </div>
+  <label>Contraseña</label>
+  <input type="password" formControlName="Contrasena" [ngClass]="{ 'is-invalid': submitted && f.Contrasena.errors }">
+  <br>
+  <div *ngIf="submitted && f.Contrasena.errors" class="invalid-feedback">
+      <div *ngIf="f.Contrasena.errors.required">Password is required</div>
+      <div *ngIf="f.Contrasena.errors.minlength">Password must be at least 6 characters</div>
+  </div>
+  <label>Confirmar Contraseña</label>
+  <input type="password" formControlName="confirmContrasena" [ngClass]="{ 'is-invalid': submitted && f.confirmContrasena.errors }">
+  <br>
+  <button type="submit">Registrarse</button>
+</form>

@@ -1,0 +1,11 @@
+{{ nombre }}
+
+<button (click)="Saludar()">Saludar</button>
+<br>
+{{ contador }}
+<button (click)="IncrementarContador()">Contar</button>
+<br>
+<input type="number" [(ngModel)]="numero"><button (click)="AddNumber()">Añadir numero</button>
+<ul>
+  <li *ngFor="let n of Numbers">{{ n }}</li>
+</ul>

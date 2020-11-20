@@ -1,0 +1,25 @@
+<p>hijo works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>UserId</th>
+      <th>Id</th>
+      <th>title</th>
+      <th>completed</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of data">
+      <td>{{ u.userId }}</td>
+      <td>{{ u.id }}</td>
+      <td>{{ u.title }}</td>
+      <td>{{ u.completed }}</td>
+      <td>
+        <button (click)="EliminarUsuario(u.id)">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

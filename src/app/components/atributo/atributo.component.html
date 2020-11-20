@@ -1,0 +1,10 @@
+<button [disabled]="desactivado" (click)="desactivado = !desactivado">Hola</button>
+
+<input type="text" (ngModel)="titulo">
+
+<select name="Data" id="Data" [(ngModel)]="seleccion">
+  <option value="Avion">Avion</option>
+  <option value="Barco">Barco</option>
+  <option value="Carro">Carro</option>
+</select>
+{{ seleccion }}

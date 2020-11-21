@@ -16,6 +16,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { MiDirectivaDirective } from './directives/mi-directiva.directive';
 import { SubjectsComponent } from './components/subjects/subjects.component';
 import { BehaivorSubjectsComponent } from './components/behaivor-subjects/behaivor-subjects.component';
+import { ViewChildComponent } from './components/view-child/view-child.component';
+import { HijoVcComponent } from './components/hijo-vc/hijo-vc.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { BehaivorSubjectsComponent } from './components/behaivor-subjects/behaiv
     FormularioComponent,
     MiDirectivaDirective,
     SubjectsComponent,
-    BehaivorSubjectsComponent
+    BehaivorSubjectsComponent,
+    ViewChildComponent,
+    HijoVcComponent
   ],
   imports: [
     BrowserModule,
